@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class ScanningDeep {
+    //Link: https://adventofcode.com/2021/day/1#part1
 
     public int countDeep(Path path) {
         int count = 0;
