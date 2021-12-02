@@ -20,7 +20,7 @@ public class ScanningDeep {
         return count;
     }
 
-    private List<String> readFile(Path path) {
+    public static List<String> readFile(Path path) {
         try {
             return Files.readAllLines(path);
         }

@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import static day01.ScanningDeep.readFile;
 
 public class ScannigThreeMeasurement {
     //Link: https://adventofcode.com/2021/day/1#part2
@@ -20,15 +21,6 @@ public class ScannigThreeMeasurement {
             }
         }
         return count;
-    }
-
-    private List<String> readFile(Path path) {
-        try {
-            return Files.readAllLines(path);
-        }
-        catch (IOException ioe) {
-            throw new IllegalArgumentException("Cannot read file.");
-        }
     }
 
     public static void main(String[] args) {
