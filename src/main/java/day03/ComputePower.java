@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class ComputePower {
+    //Link: https://adventofcode.com/2021/day/3#part1
     private List<String> input = readFile(Paths.get("src/main/resources/power_input.txt"));
 
     public int computingPower() {
@@ -23,7 +24,7 @@ public class ComputePower {
         StringBuilder sb = new StringBuilder();
         int lengthOfLine = input.get(0).length();
         for (int i = 0; i < lengthOfLine; i++) {
-            OnesAndZeroes onesAndZeroes = countOnesAndZeroes(input, i, lengthOfLine);
+            OnesAndZeroes onesAndZeroes = countOnesAndZeroes(input, i);
             appendOneOrZeroForGamma(sb, onesAndZeroes);
         }
         return new String(sb);
@@ -33,13 +34,13 @@ public class ComputePower {
         StringBuilder sb = new StringBuilder();
         int lengthOfLine = input.get(0).length();
         for (int i = 0; i < lengthOfLine; i++) {
-            OnesAndZeroes onesAndZeroes = countOnesAndZeroes(input, i, lengthOfLine);
+            OnesAndZeroes onesAndZeroes = countOnesAndZeroes(input, i);
             appendOneOrZeroForEpsilon(sb, onesAndZeroes);
         }
         return new String(sb);
     }
 
-    private OnesAndZeroes countOnesAndZeroes(List<String> input, int characterAt, int lengthOfLine) {
+    private OnesAndZeroes countOnesAndZeroes(List<String> input, int characterAt) {
         OnesAndZeroes onesAndZeroes = new OnesAndZeroes();
         for (int j = 0; j < input.size(); j++) {
             if (input.get(j).charAt(characterAt) == '0') {
